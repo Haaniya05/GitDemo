@@ -42,12 +42,12 @@ def test_practicepage(browserInstance,browser_name,list_item):
     driver.find_element(By.ID, "password").send_keys(password)
     add_screenshot(driver, "04_usernamePasswordInput")
 
-    if browser_name=="firefox":
-        driver.find_element(By.ID, "submit-login").click()
-
-    else:
-        actin=ActionChains(driver)
-        actin.move_to_element(driver.find_element(By.ID, "submit-login")).click().perform()
+    # if browser_name=="firefox":
+    #     driver.find_element(By.ID, "submit-login").click()
+    #
+    # else:
+    actin=ActionChains(driver)
+    actin.move_to_element(driver.find_element(By.ID, "submit-login")).click().perform()
 
 
 
